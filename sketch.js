@@ -88,11 +88,11 @@ function draw() {
       }
     }
 
-    const est = k * Math.log(k);
-    const cHat = stats.M / est;
-    legend = `M = ${stats.M} | k ln k ≈ ${est.toFixed(1)} | ĉ ≈ ${cHat.toFixed(
+    const est = Math.sqrt(k * Math.log(k));
+    const cHat = (stats.M * stats.M) / (k * Math.log(k));
+    legend = `M = ${stats.M} | √(k ln k) ≈ ${est.toFixed(
       2
-    )}`;
+    )} | ĉ ≈ ${cHat.toFixed(2)}`;
   } else {
     legend = "Draw a rectangle to inspect a region.";
   }
