@@ -94,7 +94,7 @@ function draw() {
       2
     )} | ĉ ≈ ${cHat.toFixed(2)}`;
   } else {
-    legend = "Draw a rectangle to inspect a region.";
+    legend = "Tip: Draw a rectangle to inspect a region.";
   }
 
   drawLegendBoxes();
